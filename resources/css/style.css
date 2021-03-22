@@ -1,0 +1,181 @@
+:root {
+  --main: #23272b;
+  --shadow: 1px 1px 5px var(--dark);
+}
+
+body {
+  text-align: center;
+  background: var(--light);
+  color: var(--main);
+  font-family: "Montserrat", serif;
+
+}
+
+img {
+  max-width: 100%;
+}
+/* Navigation section */
+
+#main-nav {
+  /* margin: 0 auto;
+  max-width: 900px; */
+  background-color: var(--dark);
+}
+.navigation {
+  flex: 1;
+  justify-content: space-around;
+}
+/* позволяет листу меню занять все оставшееся пространство */
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 1rem;
+  font-family: "Ubuntu";
+}
+/* WRAPPERS */
+.wrapper-content {
+  grid-gap: 60px;
+  display: grid;
+  margin: 0 auto;
+  max-width: 900px;
+  /* box-shadow: 1px 0 5px var(--light); */
+}
+
+/* SECTIONS ================================ */
+.section-header {
+  font-family: "Ubuntu";
+  font-size: 3rem;
+}
+hr {
+  border-style: none;
+  border-top: 8px dashed var(--main);
+  width: 19%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+.section-line1 {
+  margin-top: 2rem;
+}
+section {
+  padding: 1.5rem 1rem;
+}
+/* MAIN_SECTION */
+#main {
+  /* opacity: 0.9; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: end;
+  height: calc(var(--vh, 1vh) * 100 - 90px);
+  background-image: url(../images/desk-main.png);
+  /* изначалально фаил сисс находиться уже в ресурсах в папке сии для начало надо выити из папки сисс в ресурсы для этого необходимо поставить 2 точки после чего указать путь из папки ресурсы  */
+  background-position: center;
+  background-size: cover;
+  /* 90px высота нав бара вычитаем что бы при открытие небыло скрола и картинка была целиковая */
+  color: var(--light);
+}
+
+.main-header {
+  display: grid;
+  justify-items: center;
+  position: relative;
+  top: -60px;
+  transform: rotate(25deg);
+  text-shadow: var(--shadow);
+  font-family: "Ubuntu";
+}
+.main-header h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.main-header h2 {
+  font-size: 3rem;
+}
+
+/* ABOUT =============== */
+
+/* ABOUT */
+#about {
+  display: grid;
+  grid-gap: 2rem;
+  line-height: 1.7;
+}
+
+/* GALLERY */
+
+.gallery-img {
+  min-height: 300px;
+}
+
+.gallery-btn {
+  font-size: 40px;
+  color: black;
+  background-image: none !important;
+}
+
+.gallery-btn:hover {
+  color: gray;
+}
+
+.carousel-inner {
+  padding: 3rem 1rem;
+}
+.carousel-caption {
+  background: rgba(255, 255, 255, 0.726);
+  color: var(--dark);
+}
+
+/* footer */
+
+#footer {
+  display: grid;
+  align-items: center;
+  grid-gap: 30px;
+  align-content: center;
+  color: var(--light);
+  background: var(--main);
+  height: 200px;
+}
+
+.footer-links {
+  display: grid;
+  justify-content: center;
+  grid-gap: 40px;
+  grid-template-columns: auto auto auto;
+}
+.footer-links > a {
+  color: var(--light);
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 770px) {
+  /* navigation */
+
+  .navigation {
+    position: absolute;
+    background: #23272bea;
+    left: 0;
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    padding: 1rem 0.8rem;
+    /* background: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    right: 2rem; */
+  }
+  .collapsing {
+    transition: none !important;
+  }
+  .navbar-toggler {
+    margin-right: 1rem;
+  }
+  .nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+  }
+}
